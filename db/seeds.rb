@@ -15,21 +15,22 @@ Image.delete_all
 def random_cat_image(cat)
   descriptors = ['cat']
   descriptors << cat.color
-  descriptors << cat.name
-  descriptors << cat.name
-  descriptors += cat.description.split[3..4]
+  descriptors << cat.name.split.first
+  descriptors += cat.description.split[4..6]
+
+
 
   # "cat brown cute arabian smooty"
   query = descriptors.join(' ')
 
+
   search = GoogleCustomSearchApi.search(query, searchType: "image")
-  # binding.pry
   picture_hash = search['items'].sample
 
   picture_hash['link']
 end
 
-until Cat.count == 26 do
+until Cat.count == 99 do
   cat_hash = {}
 
   cat_hash[:sex] = %w[M F].sample
@@ -44,7 +45,7 @@ until Cat.count == 26 do
   adjective = %w[cute funny sweet fluffy sassy huggable smelly cuddly smart rabid frenzied street-wise].sample
 
   loop do
-    cat_hash[:name] = Faker::Cat.name
+    cat_hash[:name] = Faker::Cat.name + " " + Faker::Name.last_name
     cat_hash[:description] = "#{cat_hash[:name]} is a #{adjective} #{breed} and is registered with #{registry}."
     break if Cat.create(cat_hash)
   end
