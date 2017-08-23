@@ -1,0 +1,12 @@
+<h1>All The Cats</h1>
+
+<section>
+
+  <% @cats.each do |cat| %>
+  <div align='center' class= "cat-box">
+    <img src="<%= cat.selfie %>" >
+    <h2><%= link_to cat.name, cat_url(cat) %></h2>
+  </div>
+  <% end %>
+
+</section>

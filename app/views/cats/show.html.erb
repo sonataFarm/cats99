@@ -1,0 +1,13 @@
+<img src=" <%= @cat.selfie %> "/>
+
+<h1> <%= @cat.name %> </h1>
+
+<h3>Age: <%= @cat.age_in_years %> years old</h3>
+
+<h3>Sex: <%= @cat.sex %> </h3>
+
+<h3>Color: <%= @cat.color.capitalize %> </h3>
+
+<p> <%= @cat.description %> </p>
+
+<%= link_to 'Back to Cats', cats_url %>
