@@ -1,12 +1,52 @@
 @import "base/colors.scss";
 
-.logo-top {
-  color: white;
-  text-shadow: 2px 2px $golden;
-}
 
-.logo-bottom {
-  color: $dark-green;
-  text-shadow: 2px 2px rgba(0, 0, 0, 0.14);
-  font-size: 15rem;
+
+.cat-box-container {
+  a {
+    color: $golden;
+    text-decoration: none;
+    &:hover {
+      color: #02C8A7;
+    }
+  }
+
+  .cat-box {
+    padding: 15px;
+    background: $bright-coral;
+    border-radius: 7px;
+    margin: 20px;
+    height: 33vw;
+    width: 25vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    -webkit-box-shadow: 6px 10px 11px -1px rgba(0,0,0,0.75);
+    -moz-box-shadow: 6px 10px 11px -1px rgba(0,0,0,0.75);
+    box-shadow: 6px 10px 11px -1px rgba(0,0,0,0.75);
+
+    .image-container {
+      height: 90%;
+      width: 100%;
+      img {
+        width:100%;
+        height:100%;
+        object-fit: cover;
+        overflow: hidden;
+        border-radius: 15px;
+        -webkit-box-shadow: -2px -1px 5px 1px rgba(0,0,0,0.10);
+        -moz-box-shadow: -2px -1px 5px 1px rgba(0,0,0,0.10);
+        box-shadow: -2px -1px 5px 1px rgba(0,0,0,0.10);
+      }
+    }
+
+    .text {
+      margin: 5px 0 0 0;
+      text-shadow: 2px 2px black;
+      font-family: "Bangers";
+      font-weight: lighter;
+      font-size: 2rem;
+    }
+  }
 }

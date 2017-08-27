@@ -1,14 +1,16 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Cats99</title>
+    <title>Cats for Sale</title>
     <%= csrf_meta_tags %>
-    <link href="https://fonts.googleapis.com/css?family=Rock+Salt" rel="stylesheet">
     <%= stylesheet_link_tag    'application', media: 'all' %>
     <%= javascript_include_tag 'application' %>
   </head>
 
   <body>
-    <%= yield %>
+    <%= render 'shared/header' %>
+    <section class="main-content">
+      <%= yield %>
+    </section>
   </body>
 </html>
