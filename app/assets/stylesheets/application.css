@@ -19,14 +19,4 @@
 @import "base/colors.scss";
 @import "base/layout.scss";
 
-
-body {
-  background-image: url(background.jpg);
-  color: white;
-  font-family: 'Rock Salt', cursive;
-}
-
-h1 {
-  font-family: 'Rock Salt', cursive;
-  font-size: 5em;
-}
+@import "components/*"

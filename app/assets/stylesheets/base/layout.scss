@@ -1,42 +1,58 @@
+@import "colors.scss";
+
 body {
-  background-image: url(background.jpg);
+  padding: 2.5% 7%;
+  background: $sky;
   color: white;
   font-family: 'Rock Salt', cursive;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Monoton"
+}
+
+h1 {
+  font-size: 6rem;
+  font-weight: lighter;
 }
 
 // Place all the styles related to the Cats controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 a {
-  color: pink;
+  color: $golden;
+  font-family: "Bangers";
+  font-weight: lighter;
+  text-decoration: none;
+  font-size: 2rem;
+
 }
 section {
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
-
 }
 
 h1 {
   text-align: center;
+  color: white;
 }
 
 
+
+
+.cat-box {}
 
 .cat-box-1 {
   display: flex;
   flex-direction: column;
   align-content: center;
-
-
-
   width: 35%;
   margin: 10px;
   padding: 10px;
-  background: rgb(3, 173, 168);
+  background: $bright-coral;
   border-radius: 10px;
 }
-
 
 .cat-box-2 {
   display: flex;
@@ -46,10 +62,9 @@ h1 {
   width: 35%;
   margin: 10px;
   padding: 10px;
-  background: rgb(3, 173, 168);
+  background: $bright-coral;
   border-radius: 10px;
 }
-
 
 .cat-box-mid {
   display: flex;
@@ -59,7 +74,7 @@ h1 {
   width: 35%;
   margin: 10px;
   padding: 10px;
-  background: rgb(3, 173, 168);
+  background: $bright-coral;
   border-radius: 10px;
 }
 

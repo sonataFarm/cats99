@@ -1,8 +1,19 @@
-<h1>All The Cats</h1>
+<h1 class="logo">All The <span class="splash">Cats</span></h1>
 
 <section>
 
   <% counter = 1 %>
+
+  <!-- <% @cats.each do |cat| %>
+    <% if cat.image %>
+    <div align='center' class= "cat-box-<%=counter%>">
+      <img src="<%= cat.selfie %>" >
+      <h2><%= link_to cat.name, cat_url(cat) %></h2>
+      <% counter += 1 %>
+      <% counter = 1 if counter == 3 %>
+    </div>
+    <% end %>
+  <% end %> -->
 
   <% @cats.each do |cat| %>
     <% if cat.image %>

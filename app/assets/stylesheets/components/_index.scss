@@ -1,0 +1,9 @@
+@import "base/colors.scss";
+
+.logo {
+  text-shadow: 2px 2px $golden;
+  .splash {
+    color: $dark-green;
+    text-shadow: 2px 2px rgba(0, 0, 0, 0.14);
+  }
+}
