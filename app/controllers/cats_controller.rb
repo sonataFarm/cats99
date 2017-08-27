@@ -1,6 +1,8 @@
 class CatsController < ApplicationController
   def index
     @cats = Cat.all
+    @columns = 3
+    @column_class = "four columns"
   end
 
   def show
