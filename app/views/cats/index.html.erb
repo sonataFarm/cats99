@@ -2,11 +2,15 @@
 
 <section>
 
+  <% counter = 1 %>
+
   <% @cats.each do |cat| %>
-  <div align='center' class= "cat-box">
     <% if cat.image %>
+    <div align='center' class= "cat-box-<%=counter%>">
       <img src="<%= cat.selfie %>" >
       <h2><%= link_to cat.name, cat_url(cat) %></h2>
+      <% counter += 1 %>
+      <% counter = 1 if counter == 3 %>
     </div>
     <% end %>
   <% end %>
